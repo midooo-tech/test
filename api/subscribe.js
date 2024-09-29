@@ -9,7 +9,7 @@ app.use(express.static("public"));
 const publicVapidKey = "BE4LLxozZ2s94SOfmtLy5zCBd9H3Ll1TaBNlNY5d8OjnErQQ7PNBPj2BsTLSOoHCDigVBXMJpEU96iTz33UyZ_E";
 const privateVapidKey = "pUm99PHZzkqyw0Xi0br0kQRLqngHMEWHdpY8FLQ5Zq8";
 webpush.setVapidDetails("mailto:mamdou7.khalaf@gmail.com", publicVapidKey, privateVapidKey);
-const subscriptionsFile = path.join("../subscriptions.json");
+const subscriptionsFile = path.join(../subscriptions.json);
 function loadSubscriptions() {
     try {
         const data = fs.readFileSync(subscriptionsFile, "utf-8");

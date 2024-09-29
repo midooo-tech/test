@@ -1,24 +1,27 @@
 {
-    "name": "WE Book",
-    "version": "2.0.0",
-    "description": "Info app for telecom egypt employees.",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "dependencies": {
-        "body-parser": "^2.0.1",
-        "express": "^4.21.0",
-        "fs": "^0.0.2",
-        "path": "^0.12.7",
-        "web-push": "^3.6.7"
-    },
-    "engines": {
-        "node": "16.x"
-    },
-    "repository": {
-        "url": "https://github.com/mamdou75alaf/webook.git"
-    },
-    "license": "UNLICENSED",
-    "keywords": ["node"]
+  "type": "module",
+  "devDependencies": {
+    "ava": "6.1.2",
+    "chai": "5.1.0",
+    "eslint": "8.57.0",
+    "eslint-config-google": "0.14.0",
+    "mocha": "10.4.0",
+    "puppeteer": "22.6.2",
+    "static-server": "2.2.1"
+  },
+  "private": true,
+  "scripts": {
+    "ava": "npx ava ./test/*.js",
+    "dev": "npm run dev-frontend | npm run dev-backend",
+    "dev-frontend": "npx http-server ./frontend/ -a=localhost --port=8080 -o /?backend=http://localhost:8081",
+    "dev-frontend-open": "npx http-server ./frontend/ -a=0.0.0.0 --port=8080 -o /?backend=http://localhost:8081",
+    "dev-backend": "npx cross-env PORT=8081 ACCESS_CONTROL=http://localhost:8080 npx nodemon ./server.js",
+    "dev-backend-open": "npx cross-env PORT=8081 ACCESS_CONTROL=* npx nodemon ./server.js",
+    "lint": "eslint --fix '.'",
+    "test": "npm run lint && npm run ava",
+    "vercel": "npx vercel dev"
+  },
+  "dependencies": {
+    "express": "4.20.0"
+  }
 }

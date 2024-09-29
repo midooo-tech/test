@@ -42,7 +42,4 @@ app.post("/sendNotification", (req, res) => {
     });
     res.status(200).json({ message: "Notifications sent successfully!" });
 });
-app.use((req, res) => {
-    res.status(404).sendFile(__dirname + "/public/404.html");
-});
 export default app;

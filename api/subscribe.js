@@ -37,7 +37,4 @@ app.post("/subscribe", (req, res) => {
     console.log("Subscription received and saved:", subscription);
     res.status(201).json({ message: "Subscription added successfully" });
 });
-app.use((req, res) => {
-    res.status(404).sendFile(__dirname + "../public/404.html");
-});
 export default app;

@@ -45,3 +45,4 @@ app.post("/sendNotification", (req, res) => {
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/public/404.html");
 });
+export default app;

@@ -1,0 +1,24 @@
+{
+    "name": "WE Book",
+    "version": "2.0.0",
+    "description": "Info app for telecom egypt employees.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^2.0.1",
+        "express": "^4.21.0",
+        "fs": "^0.0.2",
+        "path": "^0.12.7",
+        "web-push": "^3.6.7"
+    },
+    "engines": {
+        "node": "16.x"
+    },
+    "repository": {
+        "url": "https://github.com/mamdou75alaf/webook.git"
+    },
+    "license": "UNLICENSED",
+    "keywords": ["node"]
+}
